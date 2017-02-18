@@ -64,6 +64,7 @@
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.btn_Buscar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.grb_Datos.SuspendLayout();
             this.grb_DatosDireccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -139,6 +140,7 @@
             // 
             // grb_Datos
             // 
+            this.grb_Datos.Controls.Add(this.dateTimePicker1);
             this.grb_Datos.Controls.Add(this.textBox1);
             this.grb_Datos.Controls.Add(this.grb_DatosDireccion);
             this.grb_Datos.Controls.Add(this.maskedTextBox2);
@@ -393,6 +395,13 @@
             this.btn_Salir.Text = "Salir";
             this.btn_Salir.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(220, 122);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(130, 20);
+            this.dateTimePicker1.TabIndex = 14;
+            // 
             // frm_ClienteGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,5 +467,6 @@
         private System.Windows.Forms.Button btn_Modificar;
         private System.Windows.Forms.Button btn_Agregar;
         private System.Windows.Forms.Button btn_Salir;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
