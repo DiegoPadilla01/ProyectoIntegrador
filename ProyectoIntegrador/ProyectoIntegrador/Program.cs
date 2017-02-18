@@ -17,7 +17,7 @@ namespace ProyectoIntegrador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_InicioSecionGUI());
+            Application.Run(new frm_PrincipalGUI());
             Application.Run(new frm_ClienteGUI());
         }
     }

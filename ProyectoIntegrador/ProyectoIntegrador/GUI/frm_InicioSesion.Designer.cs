@@ -29,27 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_InicioSecionGUI));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_Titulo = new System.Windows.Forms.PictureBox();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbl_Usuario = new System.Windows.Forms.Label();
             this.txt_Usuario = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Contraseña = new System.Windows.Forms.TextBox();
             this.lbl_Contraseña = new System.Windows.Forms.Label();
             this.btn_Iniciar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Titulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pic_Titulo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(286, 39);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pic_Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.pic_Titulo.Location = new System.Drawing.Point(-1, 0);
+            this.pic_Titulo.Name = "pic_Titulo";
+            this.pic_Titulo.Size = new System.Drawing.Size(286, 39);
+            this.pic_Titulo.TabIndex = 0;
+            this.pic_Titulo.TabStop = false;
+            this.pic_Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Titulo_MouseDown);
+            this.pic_Titulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pic_Titulo_MouseMove);
+            this.pic_Titulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pic_Titulo_MouseUp);
             // 
             // lbl_Titulo
             // 
@@ -62,6 +65,9 @@
             this.lbl_Titulo.Size = new System.Drawing.Size(109, 20);
             this.lbl_Titulo.TabIndex = 1;
             this.lbl_Titulo.Text = "Inicio de sesion";
+            this.lbl_Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_Titulo_MouseDown);
+            this.lbl_Titulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_Titulo_MouseMove);
+            this.lbl_Titulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lbl_Titulo_MouseUp);
             // 
             // pictureBox2
             // 
@@ -91,12 +97,13 @@
             this.txt_Usuario.Size = new System.Drawing.Size(146, 20);
             this.txt_Usuario.TabIndex = 4;
             // 
-            // textBox1
+            // txt_Contraseña
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 141);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 5;
+            this.txt_Contraseña.Location = new System.Drawing.Point(110, 141);
+            this.txt_Contraseña.Name = "txt_Contraseña";
+            this.txt_Contraseña.PasswordChar = '*';
+            this.txt_Contraseña.Size = new System.Drawing.Size(146, 20);
+            this.txt_Contraseña.TabIndex = 5;
             // 
             // lbl_Contraseña
             // 
@@ -138,15 +145,15 @@
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_Iniciar);
             this.Controls.Add(this.lbl_Contraseña);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_Contraseña);
             this.Controls.Add(this.txt_Usuario);
             this.Controls.Add(this.lbl_Usuario);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lbl_Titulo);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pic_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_InicioSecionGUI";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Titulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,12 +162,12 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_Titulo;
         private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbl_Usuario;
         private System.Windows.Forms.TextBox txt_Usuario;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Contraseña;
         private System.Windows.Forms.Label lbl_Contraseña;
         private System.Windows.Forms.Button btn_Iniciar;
         private System.Windows.Forms.Button btn_Salir;
