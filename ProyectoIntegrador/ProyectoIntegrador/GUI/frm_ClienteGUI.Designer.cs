@@ -32,23 +32,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_IDCliente = new System.Windows.Forms.TextBox();
+            this.txt_RFC = new System.Windows.Forms.TextBox();
+            this.txt_Nombre = new System.Windows.Forms.TextBox();
+            this.txt_Apellido = new System.Windows.Forms.TextBox();
             this.grb_Datos = new System.Windows.Forms.GroupBox();
             this.grb_DatosDireccion = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_CodPost = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_Colonia = new System.Windows.Forms.TextBox();
+            this.txt_Cruzamientos = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_Num = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_Calle = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_Telefono = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,18 +56,18 @@
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_Titulo = new System.Windows.Forms.PictureBox();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.grb_Acciones = new System.Windows.Forms.GroupBox();
-            this.btn_Agregar = new System.Windows.Forms.Button();
-            this.btn_Modificar = new System.Windows.Forms.Button();
-            this.btn_Eliminar = new System.Windows.Forms.Button();
             this.btn_Buscar = new System.Windows.Forms.Button();
+            this.btn_Eliminar = new System.Windows.Forms.Button();
+            this.btn_Modificar = new System.Windows.Forms.Button();
+            this.btn_Agregar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.grb_Datos.SuspendLayout();
             this.grb_DatosDireccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Titulo)).BeginInit();
             this.grb_Acciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,47 +107,47 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "RFC";
             // 
-            // textBox1
+            // txt_IDCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(54, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Text = " ";
+            this.txt_IDCliente.Location = new System.Drawing.Point(54, 44);
+            this.txt_IDCliente.Name = "txt_IDCliente";
+            this.txt_IDCliente.Size = new System.Drawing.Size(135, 20);
+            this.txt_IDCliente.TabIndex = 6;
+            this.txt_IDCliente.Text = " ";
             // 
-            // textBox2
+            // txt_RFC
             // 
-            this.textBox2.Location = new System.Drawing.Point(215, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.Text = " ";
+            this.txt_RFC.Location = new System.Drawing.Point(215, 44);
+            this.txt_RFC.Name = "txt_RFC";
+            this.txt_RFC.Size = new System.Drawing.Size(135, 20);
+            this.txt_RFC.TabIndex = 7;
+            this.txt_RFC.Text = " ";
             // 
-            // textBox3
+            // txt_Nombre
             // 
-            this.textBox3.Location = new System.Drawing.Point(54, 83);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(135, 20);
-            this.textBox3.TabIndex = 8;
+            this.txt_Nombre.Location = new System.Drawing.Point(54, 83);
+            this.txt_Nombre.Name = "txt_Nombre";
+            this.txt_Nombre.Size = new System.Drawing.Size(135, 20);
+            this.txt_Nombre.TabIndex = 8;
             // 
-            // textBox5
+            // txt_Apellido
             // 
-            this.textBox5.Location = new System.Drawing.Point(215, 83);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(135, 20);
-            this.textBox5.TabIndex = 11;
+            this.txt_Apellido.Location = new System.Drawing.Point(215, 83);
+            this.txt_Apellido.Name = "txt_Apellido";
+            this.txt_Apellido.Size = new System.Drawing.Size(135, 20);
+            this.txt_Apellido.TabIndex = 11;
             // 
             // grb_Datos
             // 
-            this.grb_Datos.Controls.Add(this.textBox1);
+            this.grb_Datos.Controls.Add(this.txt_IDCliente);
             this.grb_Datos.Controls.Add(this.grb_DatosDireccion);
-            this.grb_Datos.Controls.Add(this.maskedTextBox2);
-            this.grb_Datos.Controls.Add(this.textBox5);
+            this.grb_Datos.Controls.Add(this.txt_Telefono);
+            this.grb_Datos.Controls.Add(this.txt_Apellido);
             this.grb_Datos.Controls.Add(this.label7);
             this.grb_Datos.Controls.Add(this.label1);
             this.grb_Datos.Controls.Add(this.label5);
-            this.grb_Datos.Controls.Add(this.textBox3);
-            this.grb_Datos.Controls.Add(this.textBox2);
+            this.grb_Datos.Controls.Add(this.txt_Nombre);
+            this.grb_Datos.Controls.Add(this.txt_RFC);
             this.grb_Datos.Controls.Add(this.label4);
             this.grb_Datos.Controls.Add(this.label2);
             this.grb_Datos.Location = new System.Drawing.Point(21, 45);
@@ -159,15 +159,15 @@
             // 
             // grb_DatosDireccion
             // 
-            this.grb_DatosDireccion.Controls.Add(this.maskedTextBox1);
+            this.grb_DatosDireccion.Controls.Add(this.txt_CodPost);
             this.grb_DatosDireccion.Controls.Add(this.label10);
-            this.grb_DatosDireccion.Controls.Add(this.textBox8);
-            this.grb_DatosDireccion.Controls.Add(this.textBox7);
+            this.grb_DatosDireccion.Controls.Add(this.txt_Colonia);
+            this.grb_DatosDireccion.Controls.Add(this.txt_Cruzamientos);
             this.grb_DatosDireccion.Controls.Add(this.label9);
-            this.grb_DatosDireccion.Controls.Add(this.textBox6);
+            this.grb_DatosDireccion.Controls.Add(this.txt_Num);
             this.grb_DatosDireccion.Controls.Add(this.label6);
             this.grb_DatosDireccion.Controls.Add(this.label8);
-            this.grb_DatosDireccion.Controls.Add(this.textBox4);
+            this.grb_DatosDireccion.Controls.Add(this.txt_Calle);
             this.grb_DatosDireccion.Controls.Add(this.label3);
             this.grb_DatosDireccion.Location = new System.Drawing.Point(17, 157);
             this.grb_DatosDireccion.Name = "grb_DatosDireccion";
@@ -176,14 +176,14 @@
             this.grb_DatosDireccion.TabStop = false;
             this.grb_DatosDireccion.Text = "Dirección";
             // 
-            // maskedTextBox1
+            // txt_CodPost
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(273, 82);
-            this.maskedTextBox1.Mask = "99999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(83, 20);
-            this.maskedTextBox1.TabIndex = 20;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.txt_CodPost.Location = new System.Drawing.Point(273, 82);
+            this.txt_CodPost.Mask = "99999";
+            this.txt_CodPost.Name = "txt_CodPost";
+            this.txt_CodPost.Size = new System.Drawing.Size(83, 20);
+            this.txt_CodPost.TabIndex = 20;
+            this.txt_CodPost.ValidatingType = typeof(int);
             // 
             // label10
             // 
@@ -194,19 +194,19 @@
             this.label10.TabIndex = 16;
             this.label10.Text = "Cod. Postal";
             // 
-            // textBox8
+            // txt_Colonia
             // 
-            this.textBox8.Location = new System.Drawing.Point(25, 82);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(232, 20);
-            this.textBox8.TabIndex = 19;
+            this.txt_Colonia.Location = new System.Drawing.Point(25, 82);
+            this.txt_Colonia.Name = "txt_Colonia";
+            this.txt_Colonia.Size = new System.Drawing.Size(232, 20);
+            this.txt_Colonia.TabIndex = 19;
             // 
-            // textBox7
+            // txt_Cruzamientos
             // 
-            this.textBox7.Location = new System.Drawing.Point(198, 43);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(158, 20);
-            this.textBox7.TabIndex = 18;
+            this.txt_Cruzamientos.Location = new System.Drawing.Point(198, 43);
+            this.txt_Cruzamientos.Name = "txt_Cruzamientos";
+            this.txt_Cruzamientos.Size = new System.Drawing.Size(158, 20);
+            this.txt_Cruzamientos.TabIndex = 18;
             // 
             // label9
             // 
@@ -217,12 +217,12 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Colonia";
             // 
-            // textBox6
+            // txt_Num
             // 
-            this.textBox6.Location = new System.Drawing.Point(125, 43);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(62, 20);
-            this.textBox6.TabIndex = 17;
+            this.txt_Num.Location = new System.Drawing.Point(125, 43);
+            this.txt_Num.Name = "txt_Num";
+            this.txt_Num.Size = new System.Drawing.Size(62, 20);
+            this.txt_Num.TabIndex = 17;
             // 
             // label6
             // 
@@ -242,12 +242,12 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Cruzamientos";
             // 
-            // textBox4
+            // txt_Calle
             // 
-            this.textBox4.Location = new System.Drawing.Point(25, 43);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(79, 20);
-            this.textBox4.TabIndex = 2;
+            this.txt_Calle.Location = new System.Drawing.Point(25, 43);
+            this.txt_Calle.Name = "txt_Calle";
+            this.txt_Calle.Size = new System.Drawing.Size(79, 20);
+            this.txt_Calle.TabIndex = 2;
             // 
             // label3
             // 
@@ -258,13 +258,13 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Calle";
             // 
-            // maskedTextBox2
+            // txt_Telefono
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(54, 122);
-            this.maskedTextBox2.Mask = "(999)000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(135, 20);
-            this.maskedTextBox2.TabIndex = 10;
+            this.txt_Telefono.Location = new System.Drawing.Point(54, 122);
+            this.txt_Telefono.Mask = "(999)000-0000";
+            this.txt_Telefono.Name = "txt_Telefono";
+            this.txt_Telefono.Size = new System.Drawing.Size(135, 20);
+            this.txt_Telefono.TabIndex = 10;
             // 
             // label7
             // 
@@ -314,14 +314,17 @@
             this.Direccion.HeaderText = "Direccion";
             this.Direccion.Name = "Direccion";
             // 
-            // pictureBox1
+            // pic_Titulo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(580, 39);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.pic_Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.pic_Titulo.Location = new System.Drawing.Point(0, 0);
+            this.pic_Titulo.Name = "pic_Titulo";
+            this.pic_Titulo.Size = new System.Drawing.Size(580, 39);
+            this.pic_Titulo.TabIndex = 15;
+            this.pic_Titulo.TabStop = false;
+            this.pic_Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Titulo_MouseDown);
+            this.pic_Titulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pic_Titulo_MouseMove);
+            this.pic_Titulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pic_Titulo_MouseUp);
             // 
             // lbl_Titulo
             // 
@@ -330,6 +333,7 @@
             this.lbl_Titulo.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_Titulo.Location = new System.Drawing.Point(17, 9);
+            this.lbl_Titulo.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(144, 20);
             this.lbl_Titulo.TabIndex = 16;
@@ -348,23 +352,14 @@
             this.grb_Acciones.TabStop = false;
             this.grb_Acciones.Text = "Acciones";
             // 
-            // btn_Agregar
+            // btn_Buscar
             // 
-            this.btn_Agregar.Location = new System.Drawing.Point(7, 66);
-            this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(112, 36);
-            this.btn_Agregar.TabIndex = 0;
-            this.btn_Agregar.Text = " Agregar";
-            this.btn_Agregar.UseVisualStyleBackColor = true;
-            // 
-            // btn_Modificar
-            // 
-            this.btn_Modificar.Location = new System.Drawing.Point(7, 112);
-            this.btn_Modificar.Name = "btn_Modificar";
-            this.btn_Modificar.Size = new System.Drawing.Size(112, 36);
-            this.btn_Modificar.TabIndex = 1;
-            this.btn_Modificar.Text = "Modificar";
-            this.btn_Modificar.UseVisualStyleBackColor = true;
+            this.btn_Buscar.Location = new System.Drawing.Point(6, 19);
+            this.btn_Buscar.Name = "btn_Buscar";
+            this.btn_Buscar.Size = new System.Drawing.Size(112, 36);
+            this.btn_Buscar.TabIndex = 4;
+            this.btn_Buscar.Text = "Buscar";
+            this.btn_Buscar.UseVisualStyleBackColor = true;
             // 
             // btn_Eliminar
             // 
@@ -375,14 +370,23 @@
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
             // 
-            // btn_Buscar
+            // btn_Modificar
             // 
-            this.btn_Buscar.Location = new System.Drawing.Point(6, 19);
-            this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(112, 36);
-            this.btn_Buscar.TabIndex = 4;
-            this.btn_Buscar.Text = "Buscar";
-            this.btn_Buscar.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Location = new System.Drawing.Point(7, 112);
+            this.btn_Modificar.Name = "btn_Modificar";
+            this.btn_Modificar.Size = new System.Drawing.Size(112, 36);
+            this.btn_Modificar.TabIndex = 1;
+            this.btn_Modificar.Text = "Modificar";
+            this.btn_Modificar.UseVisualStyleBackColor = true;
+            // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.Location = new System.Drawing.Point(7, 66);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(112, 36);
+            this.btn_Agregar.TabIndex = 0;
+            this.btn_Agregar.Text = " Agregar";
+            this.btn_Agregar.UseVisualStyleBackColor = true;
             // 
             // btn_Salir
             // 
@@ -402,18 +406,19 @@
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.grb_Acciones);
             this.Controls.Add(this.lbl_Titulo);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pic_Titulo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grb_Datos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_ClienteGUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
             this.grb_Datos.ResumeLayout(false);
             this.grb_Datos.PerformLayout();
             this.grb_DatosDireccion.ResumeLayout(false);
             this.grb_DatosDireccion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Titulo)).EndInit();
             this.grb_Acciones.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -426,12 +431,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_IDCliente;
+        private System.Windows.Forms.TextBox txt_RFC;
+        private System.Windows.Forms.TextBox txt_Nombre;
+        private System.Windows.Forms.TextBox txt_Apellido;
         private System.Windows.Forms.GroupBox grb_Datos;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox txt_Telefono;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
@@ -440,17 +445,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.GroupBox grb_DatosDireccion;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txt_CodPost;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_Colonia;
+        private System.Windows.Forms.TextBox txt_Cruzamientos;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_Num;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_Calle;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_Titulo;
         private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.GroupBox grb_Acciones;
         private System.Windows.Forms.Button btn_Buscar;
