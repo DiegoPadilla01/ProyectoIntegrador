@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace ProyectoIntegrador.GUI
 {
-    public partial class frm_ClienteGUI : Form
+    public partial class frm_ProveedoresGUI : Form
     {
         public bool activo = false;
 
         HerramientasGUI Herramientas = new HerramientasGUI();
 
-        public frm_ClienteGUI()
+        public frm_ProveedoresGUI()
         {
             InitializeComponent();
         }
@@ -26,20 +26,6 @@ namespace ProyectoIntegrador.GUI
             Herramientas.FormAct = this;
             activo = false;
             Herramientas.CerrarForm();
-        }
-
-        private void txt_RFC_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Agregar_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void frm_ClienteGUI_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

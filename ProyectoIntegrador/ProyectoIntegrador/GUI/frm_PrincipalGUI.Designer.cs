@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.pnl_Catalogos = new System.Windows.Forms.Panel();
+            this.btn_Proveedores = new System.Windows.Forms.Button();
+            this.btn_Marcas = new System.Windows.Forms.Button();
+            this.btn_Cerrar = new System.Windows.Forms.Button();
             this.btn_Usuarios = new System.Windows.Forms.Button();
             this.btn_Productos = new System.Windows.Forms.Button();
             this.btn_CatalogoClientes = new System.Windows.Forms.Button();
@@ -36,7 +39,6 @@
             this.btn_Salir = new System.Windows.Forms.Button();
             this.btn_Catalogo = new System.Windows.Forms.Button();
             this.btn_AbrirPunto = new System.Windows.Forms.Button();
-            this.btn_Cerrar = new System.Windows.Forms.Button();
             this.pnl_Catalogos.SuspendLayout();
             this.pnl_Principal.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +46,8 @@
             // pnl_Catalogos
             // 
             this.pnl_Catalogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.pnl_Catalogos.Controls.Add(this.btn_Proveedores);
+            this.pnl_Catalogos.Controls.Add(this.btn_Marcas);
             this.pnl_Catalogos.Controls.Add(this.btn_Cerrar);
             this.pnl_Catalogos.Controls.Add(this.btn_Usuarios);
             this.pnl_Catalogos.Controls.Add(this.btn_Productos);
@@ -53,6 +57,51 @@
             this.pnl_Catalogos.Size = new System.Drawing.Size(157, 729);
             this.pnl_Catalogos.TabIndex = 26;
             this.pnl_Catalogos.Visible = false;
+            // 
+            // btn_Proveedores
+            // 
+            this.btn_Proveedores.BackgroundImage = global::ProyectoIntegrador.Properties.Resources.boton_normalMenuPrin;
+            this.btn_Proveedores.FlatAppearance.BorderSize = 0;
+            this.btn_Proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Proveedores.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Proveedores.Image = global::ProyectoIntegrador.Properties.Resources.ic_account_box_black_36dp;
+            this.btn_Proveedores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Proveedores.Location = new System.Drawing.Point(20, 460);
+            this.btn_Proveedores.Name = "btn_Proveedores";
+            this.btn_Proveedores.Size = new System.Drawing.Size(117, 91);
+            this.btn_Proveedores.TabIndex = 36;
+            this.btn_Proveedores.Text = "\r\nProveedores";
+            this.btn_Proveedores.UseVisualStyleBackColor = true;
+            this.btn_Proveedores.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Marcas
+            // 
+            this.btn_Marcas.BackgroundImage = global::ProyectoIntegrador.Properties.Resources.boton_normalMenuPrin;
+            this.btn_Marcas.FlatAppearance.BorderSize = 0;
+            this.btn_Marcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Marcas.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Marcas.Image = global::ProyectoIntegrador.Properties.Resources.ic_account_box_black_36dp;
+            this.btn_Marcas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Marcas.Location = new System.Drawing.Point(20, 357);
+            this.btn_Marcas.Name = "btn_Marcas";
+            this.btn_Marcas.Size = new System.Drawing.Size(117, 91);
+            this.btn_Marcas.TabIndex = 35;
+            this.btn_Marcas.Text = "\r\nMarcas";
+            this.btn_Marcas.UseVisualStyleBackColor = true;
+            this.btn_Marcas.Click += new System.EventHandler(this.btn_Marcas_Click);
+            // 
+            // btn_Cerrar
+            // 
+            this.btn_Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btn_Cerrar.FlatAppearance.BorderSize = 0;
+            this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cerrar.Image = global::ProyectoIntegrador.Properties.Resources.ic_clear_black_36dp;
+            this.btn_Cerrar.Location = new System.Drawing.Point(113, 3);
+            this.btn_Cerrar.Name = "btn_Cerrar";
+            this.btn_Cerrar.Size = new System.Drawing.Size(41, 30);
+            this.btn_Cerrar.TabIndex = 34;
+            this.btn_Cerrar.UseVisualStyleBackColor = false;
+            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
             // 
             // btn_Usuarios
             // 
@@ -68,6 +117,7 @@
             this.btn_Usuarios.TabIndex = 2;
             this.btn_Usuarios.Text = " \r\nUsuarios";
             this.btn_Usuarios.UseVisualStyleBackColor = true;
+            this.btn_Usuarios.Click += new System.EventHandler(this.btn_Usuarios_Click);
             // 
             // btn_Productos
             // 
@@ -83,6 +133,7 @@
             this.btn_Productos.TabIndex = 1;
             this.btn_Productos.Text = "\r\nProductos";
             this.btn_Productos.UseVisualStyleBackColor = true;
+            this.btn_Productos.Click += new System.EventHandler(this.btn_Productos_Click);
             // 
             // btn_CatalogoClientes
             // 
@@ -163,19 +214,6 @@
             this.btn_AbrirPunto.MouseEnter += new System.EventHandler(this.btn_AbrirPunto_MouseEnter);
             this.btn_AbrirPunto.MouseLeave += new System.EventHandler(this.btn_AbrirPunto_MouseLeave);
             // 
-            // btn_Cerrar
-            // 
-            this.btn_Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btn_Cerrar.FlatAppearance.BorderSize = 0;
-            this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cerrar.Image = global::ProyectoIntegrador.Properties.Resources.ic_clear_black_36dp;
-            this.btn_Cerrar.Location = new System.Drawing.Point(113, 3);
-            this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(41, 30);
-            this.btn_Cerrar.TabIndex = 34;
-            this.btn_Cerrar.UseVisualStyleBackColor = false;
-            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
-            // 
             // frm_PrincipalGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -211,5 +249,7 @@
         private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Button btn_Usuarios;
         private System.Windows.Forms.Button btn_Cerrar;
+        private System.Windows.Forms.Button btn_Marcas;
+        private System.Windows.Forms.Button btn_Proveedores;
     }
 }

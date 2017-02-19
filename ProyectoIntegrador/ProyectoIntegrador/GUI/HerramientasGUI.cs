@@ -10,6 +10,7 @@ namespace ProyectoIntegrador.GUI
     class HerramientasGUI
     {
         private Form formAct;
+        private Form formHijo;
 
         public Form FormAct
         {
@@ -24,11 +25,24 @@ namespace ProyectoIntegrador.GUI
             }
         }
 
+        public Form FormHijo
+        {
+            get
+            {
+                return formHijo;
+            }
+
+            set
+            {
+                formHijo = value;
+            }
+        }
+
         public void CerrarForm()
         {
             if (MessageBox.Show("¿Desea cerrar la ventana?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                formAct.Close();
+                formAct.Hide();
             }
         }
         public void CerrarSistema()
@@ -38,5 +52,6 @@ namespace ProyectoIntegrador.GUI
                 formAct.Close();
             }
         }
+
     }
 }

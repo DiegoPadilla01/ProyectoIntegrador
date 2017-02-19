@@ -416,6 +416,7 @@
             this.Name = "frm_ClienteGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.frm_ClienteGUI_Load);
             this.grb_Datos.ResumeLayout(false);
             this.grb_Datos.PerformLayout();
             this.grb_DatosDireccion.ResumeLayout(false);

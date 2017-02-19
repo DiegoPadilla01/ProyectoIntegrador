@@ -14,7 +14,13 @@ namespace ProyectoIntegrador.GUI
     public partial class frm_PrincipalGUI : Form
     {
         private bool menuActivo = false;
+
         HerramientasGUI herramientas = new HerramientasGUI();
+
+        frm_MarcasGUI formMarcas = new frm_MarcasGUI();
+        frm_ProductosGUI formProductos = new frm_ProductosGUI();
+        frm_UsuariosGUI formUsuarios = new frm_UsuariosGUI();
+        frm_ProveedoresGUI formProveedores = new frm_ProveedoresGUI();
         frm_ClienteGUI formClientes = new frm_ClienteGUI();
 
 
@@ -73,11 +79,8 @@ namespace ProyectoIntegrador.GUI
         {
             if (!formClientes.activo == true)
             {
-                formClientes.MdiParent = this;
                 formClientes.activo = true;
-                pnl_Catalogos.Visible = false;
-                menuActivo = false;
-                formClientes.Show();
+                AbrirForm(formClientes);
                 
             }
         }
@@ -111,6 +114,53 @@ namespace ProyectoIntegrador.GUI
         {
             pnl_Catalogos.Visible = false;
             menuActivo = false;
+        }
+
+        private void btn_Productos_Click(object sender, EventArgs e)
+        {
+            if (!formProductos.activo == true)
+            {
+                formProductos.activo = true;
+                AbrirForm(formProductos);
+            }
+        }
+
+        private void AbrirForm(Form form)
+        {
+            form.MdiParent = this;
+            pnl_Catalogos.Visible = false;
+            menuActivo = false;
+            form.Show();
+        }
+
+        private void btn_Usuarios_Click(object sender, EventArgs e)
+        {
+            if (!formUsuarios.activo == true)
+            {
+                formUsuarios.activo = true;
+                AbrirForm(formUsuarios);
+
+            }
+        }
+
+        private void btn_Marcas_Click(object sender, EventArgs e)
+        {
+            if (!formMarcas.activo == true)
+            {
+                formMarcas.activo = true;
+                AbrirForm(formMarcas);
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!formProveedores.activo == true)
+            {
+                formProveedores.activo = true;
+                AbrirForm(formProveedores);
+
+            }
         }
     }
 }
