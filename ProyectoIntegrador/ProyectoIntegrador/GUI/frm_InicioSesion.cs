@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoIntegrador.GUI;
+using ProyectoIntegrador.BO;
 
 namespace ProyectoIntegrador
 {
     public partial class frm_InicioSecionGUI : Form
     {
-        private int px, py;
-        private bool mover;
-         
+        HerramientasGUI Herramientas = new HerramientasGUI();
+        InicioSesionBO Login = new InicioSesionBO(); 
+
         public frm_InicioSecionGUI()
         {
             InitializeComponent();
@@ -22,56 +24,23 @@ namespace ProyectoIntegrador
 
         private void btn_Salir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-             this.Close();
-            }
+            Herramientas.FormAct = this;
+            Herramientas.CerrarForm();
         }
 
         private void btn_Iniciar_Click(object sender, EventArgs e)
         {
-        }
-
-        private void pic_Titulo_MouseUp(object sender, MouseEventArgs e)
-        {
-            mover = false;
-        }
-
-        private void pic_Titulo_MouseMove(object sender, MouseEventArgs e)
-        {
-            Mover();
-        }
-
-        private void pic_Titulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            px = e.X;
-            py = e.Y;
-            mover = true;
-        }
-
-        private void lbl_Titulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            mover = true;
-
-        }
-
-        private void lbl_Titulo_MouseUp(object sender, MouseEventArgs e)
-        {
-            mover = false;
-        }
-
-        private void lbl_Titulo_MouseMove(object sender, MouseEventArgs e)
-        {
-            Mover();
-        }
-
-        public void Mover()
-        {
-            if (mover)
+            Login.UserName = txt_Usuario.Text;
+            Login.Password = txt_Contraseña.Text;
+            if (Login.Login() == true)
             {
-                this.Location = this.PointToScreen(new Point(MousePosition.X - this.Location.X - px, MousePosition.Y - this.Location.Y - py));
+                MessageBox.Show("Bienvenido", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
             }
+
+
         }
+
 
     }
 }
