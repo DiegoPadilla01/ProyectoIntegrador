@@ -22,6 +22,7 @@ namespace ProyectoIntegrador.GUI
         frm_UsuariosGUI formUsuarios = new frm_UsuariosGUI();
         frm_ProveedoresGUI formProveedores = new frm_ProveedoresGUI();
         frm_ClienteGUI formClientes = new frm_ClienteGUI();
+        frm_PuntodeVentaGUI formVentas = new frm_PuntodeVentaGUI();
 
 
         public frm_PrincipalGUI()
@@ -159,6 +160,16 @@ namespace ProyectoIntegrador.GUI
             {
                 formProveedores.activo = true;
                 AbrirForm(formProveedores);
+
+            }
+        }
+
+        private void btn_AbrirPunto_Click(object sender, EventArgs e)
+        {
+            if (!formVentas.activo == true)
+            {
+                formVentas.activo = true;
+                AbrirForm(formVentas);
 
             }
         }

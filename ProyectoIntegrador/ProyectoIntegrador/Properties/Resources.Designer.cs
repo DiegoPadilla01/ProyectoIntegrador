@@ -83,6 +83,16 @@ namespace ProyectoIntegrador.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camion_de_carga {
+            get {
+                object obj = ResourceManager.GetObject("camion_de_carga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_account_box_black_24dp {
             get {
                 object obj = ResourceManager.GetObject("ic_account_box_black_24dp", resourceCulture);
@@ -246,6 +256,16 @@ namespace ProyectoIntegrador.Properties {
         internal static System.Drawing.Bitmap ic_shopping_cart_white_36dp {
             get {
                 object obj = ResourceManager.GetObject("ic_shopping_cart_white_36dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap interfaz {
+            get {
+                object obj = ResourceManager.GetObject("interfaz", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

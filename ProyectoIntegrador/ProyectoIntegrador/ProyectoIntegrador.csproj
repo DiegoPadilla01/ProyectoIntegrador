@@ -86,6 +86,12 @@
     <Compile Include="GUI\frm_ProveedoresGUI.designer.cs">
       <DependentUpon>frm_ProveedoresGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frm_PuntodeVentaGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_PuntodeVentaGUI.Designer.cs">
+      <DependentUpon>frm_PuntodeVentaGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_UsuariosGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_ProveedoresGUI.resx">
       <DependentUpon>frm_ProveedoresGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_PuntodeVentaGUI.resx">
+      <DependentUpon>frm_PuntodeVentaGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_UsuariosGUI.resx">
       <DependentUpon>frm_UsuariosGUI.cs</DependentUpon>
@@ -207,6 +216,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_clear_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interfaz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camion-de-carga.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

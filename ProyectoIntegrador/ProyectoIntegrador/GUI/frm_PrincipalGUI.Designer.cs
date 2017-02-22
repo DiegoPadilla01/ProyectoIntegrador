@@ -45,7 +45,7 @@
             // 
             // pnl_Catalogos
             // 
-            this.pnl_Catalogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.pnl_Catalogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.pnl_Catalogos.Controls.Add(this.btn_Proveedores);
             this.pnl_Catalogos.Controls.Add(this.btn_Marcas);
             this.pnl_Catalogos.Controls.Add(this.btn_Cerrar);
@@ -64,7 +64,7 @@
             this.btn_Proveedores.FlatAppearance.BorderSize = 0;
             this.btn_Proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Proveedores.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Proveedores.Image = global::ProyectoIntegrador.Properties.Resources.ic_account_box_black_36dp;
+            this.btn_Proveedores.Image = global::ProyectoIntegrador.Properties.Resources.camion_de_carga;
             this.btn_Proveedores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Proveedores.Location = new System.Drawing.Point(20, 460);
             this.btn_Proveedores.Name = "btn_Proveedores";
@@ -80,7 +80,7 @@
             this.btn_Marcas.FlatAppearance.BorderSize = 0;
             this.btn_Marcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Marcas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Marcas.Image = global::ProyectoIntegrador.Properties.Resources.ic_account_box_black_36dp;
+            this.btn_Marcas.Image = global::ProyectoIntegrador.Properties.Resources.interfaz;
             this.btn_Marcas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Marcas.Location = new System.Drawing.Point(20, 357);
             this.btn_Marcas.Name = "btn_Marcas";
@@ -109,7 +109,7 @@
             this.btn_Usuarios.FlatAppearance.BorderSize = 0;
             this.btn_Usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Usuarios.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Usuarios.Image = global::ProyectoIntegrador.Properties.Resources.ic_account_box_black_36dp;
+            this.btn_Usuarios.Image = global::ProyectoIntegrador.Properties.Resources.ic_account_box_white_36dp;
             this.btn_Usuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Usuarios.Location = new System.Drawing.Point(20, 251);
             this.btn_Usuarios.Name = "btn_Usuarios";
@@ -141,7 +141,7 @@
             this.btn_CatalogoClientes.FlatAppearance.BorderSize = 0;
             this.btn_CatalogoClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CatalogoClientes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_CatalogoClientes.Image = global::ProyectoIntegrador.Properties.Resources.ic_account_box_black_36dp;
+            this.btn_CatalogoClientes.Image = global::ProyectoIntegrador.Properties.Resources.ic_account_box_white_36dp;
             this.btn_CatalogoClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_CatalogoClientes.Location = new System.Drawing.Point(20, 39);
             this.btn_CatalogoClientes.Name = "btn_CatalogoClientes";
@@ -157,7 +157,7 @@
             this.pnl_Principal.Controls.Add(this.btn_Salir);
             this.pnl_Principal.Controls.Add(this.btn_Catalogo);
             this.pnl_Principal.Controls.Add(this.btn_AbrirPunto);
-            this.pnl_Principal.Location = new System.Drawing.Point(3, -2);
+            this.pnl_Principal.Location = new System.Drawing.Point(0, -1);
             this.pnl_Principal.Name = "pnl_Principal";
             this.pnl_Principal.Size = new System.Drawing.Size(157, 747);
             this.pnl_Principal.TabIndex = 30;
@@ -170,7 +170,7 @@
             this.btn_Salir.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Salir.Image = global::ProyectoIntegrador.Properties.Resources.ic_power_settings_new_black_36dp;
             this.btn_Salir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Salir.Location = new System.Drawing.Point(40, 640);
+            this.btn_Salir.Location = new System.Drawing.Point(40, 643);
             this.btn_Salir.Name = "btn_Salir";
             this.btn_Salir.Size = new System.Drawing.Size(78, 76);
             this.btn_Salir.TabIndex = 33;
@@ -183,7 +183,7 @@
             this.btn_Catalogo.FlatAppearance.BorderSize = 0;
             this.btn_Catalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Catalogo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Catalogo.Image = global::ProyectoIntegrador.Properties.Resources.ic_library_books_black_36dp;
+            this.btn_Catalogo.Image = global::ProyectoIntegrador.Properties.Resources.ic_library_books_white_36dp;
             this.btn_Catalogo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Catalogo.Location = new System.Drawing.Point(20, 147);
             this.btn_Catalogo.Name = "btn_Catalogo";
@@ -202,7 +202,7 @@
             this.btn_AbrirPunto.FlatAppearance.BorderSize = 0;
             this.btn_AbrirPunto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AbrirPunto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_AbrirPunto.Image = global::ProyectoIntegrador.Properties.Resources.ic_shopping_cart_black_48dp;
+            this.btn_AbrirPunto.Image = global::ProyectoIntegrador.Properties.Resources.ic_shopping_cart_white_36dp;
             this.btn_AbrirPunto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_AbrirPunto.Location = new System.Drawing.Point(20, 41);
             this.btn_AbrirPunto.Name = "btn_AbrirPunto";
@@ -211,6 +211,7 @@
             this.btn_AbrirPunto.Text = "Punto de venta";
             this.btn_AbrirPunto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_AbrirPunto.UseVisualStyleBackColor = true;
+            this.btn_AbrirPunto.Click += new System.EventHandler(this.btn_AbrirPunto_Click);
             this.btn_AbrirPunto.MouseEnter += new System.EventHandler(this.btn_AbrirPunto_MouseEnter);
             this.btn_AbrirPunto.MouseLeave += new System.EventHandler(this.btn_AbrirPunto_MouseLeave);
             // 
@@ -218,9 +219,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProyectoIntegrador.Properties.Resources._16819174_1018212081656487_2274408091286444770_o;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.pnl_Principal);
             this.Controls.Add(this.pnl_Catalogos);
             this.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
