@@ -44,22 +44,22 @@ namespace ProyectoIntegrador.GUI
 
         private void btn_AbrirPunto_MouseEnter(object sender, EventArgs e)
         {
-            btn_AbrirPunto.Image = Resources.ic_shopping_cart_white_36dp;
+            //btn_AbrirPunto.Image = Resources.ic_shopping_cart_white_36dp;
         }
 
         private void btn_AbrirPunto_MouseLeave(object sender, EventArgs e)
         {
-            btn_AbrirPunto.Image = Resources.ic_shopping_cart_black_48dp;
+            //btn_AbrirPunto.Image = Resources.ic_shopping_cart_black_48dp;
         }
 
         private void btn_Catalogo_MouseLeave(object sender, EventArgs e)
         {
-            btn_Catalogo.Image = Resources.ic_library_books_black_36dp;
+            //btn_Catalogo.Image = Resources.ic_library_books_black_36dp;
         }
 
         private void btn_Catalogo_MouseEnter(object sender, EventArgs e)
         {
-            btn_Catalogo.Image = Resources.ic_library_books_white_36dp;
+            //btn_Catalogo.Image = Resources.ic_library_books_white_36dp;
         }
 
         private void btn_Catalogo_Click(object sender, EventArgs e)

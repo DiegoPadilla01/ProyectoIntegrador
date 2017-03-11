@@ -30,7 +30,7 @@
         {
             this.grb_Datos = new System.Windows.Forms.GroupBox();
             this.grb_Dieccion = new System.Windows.Forms.GroupBox();
-            this.txr_CodPostal = new System.Windows.Forms.TextBox();
+            this.txt_CodPostal = new System.Windows.Forms.TextBox();
             this.txt_Colonia = new System.Windows.Forms.TextBox();
             this.lbl_CodPostal = new System.Windows.Forms.Label();
             this.lbl_Colonia = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.lbl_Num = new System.Windows.Forms.Label();
             this.txt_Calle = new System.Windows.Forms.TextBox();
             this.lbl_Calle = new System.Windows.Forms.Label();
-            this.mas = new System.Windows.Forms.MaskedTextBox();
+            this.msk_Telefono = new System.Windows.Forms.MaskedTextBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.txt_RFC = new System.Windows.Forms.TextBox();
             this.txt_ID = new System.Windows.Forms.TextBox();
@@ -49,16 +49,11 @@
             this.lbl_RFC = new System.Windows.Forms.Label();
             this.lbl_Id = new System.Windows.Forms.Label();
             this.dtg_Proveedores = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
-            this.btn_Agregar = new System.Windows.Forms.Button();
+            this.btn_Nuevo = new System.Windows.Forms.Button();
             this.btn_Buscar = new System.Windows.Forms.Button();
             this.btn_Salir = new System.Windows.Forms.Button();
             this.lbl_Titulo = new System.Windows.Forms.Label();
@@ -73,7 +68,7 @@
             // grb_Datos
             // 
             this.grb_Datos.Controls.Add(this.grb_Dieccion);
-            this.grb_Datos.Controls.Add(this.mas);
+            this.grb_Datos.Controls.Add(this.msk_Telefono);
             this.grb_Datos.Controls.Add(this.txt_Nombre);
             this.grb_Datos.Controls.Add(this.txt_RFC);
             this.grb_Datos.Controls.Add(this.txt_ID);
@@ -90,7 +85,7 @@
             // 
             // grb_Dieccion
             // 
-            this.grb_Dieccion.Controls.Add(this.txr_CodPostal);
+            this.grb_Dieccion.Controls.Add(this.txt_CodPostal);
             this.grb_Dieccion.Controls.Add(this.txt_Colonia);
             this.grb_Dieccion.Controls.Add(this.lbl_CodPostal);
             this.grb_Dieccion.Controls.Add(this.lbl_Colonia);
@@ -107,12 +102,12 @@
             this.grb_Dieccion.TabStop = false;
             this.grb_Dieccion.Text = "Dirección";
             // 
-            // txr_CodPostal
+            // txt_CodPostal
             // 
-            this.txr_CodPostal.Location = new System.Drawing.Point(212, 83);
-            this.txr_CodPostal.Name = "txr_CodPostal";
-            this.txr_CodPostal.Size = new System.Drawing.Size(87, 20);
-            this.txr_CodPostal.TabIndex = 11;
+            this.txt_CodPostal.Location = new System.Drawing.Point(212, 83);
+            this.txt_CodPostal.Name = "txt_CodPostal";
+            this.txt_CodPostal.Size = new System.Drawing.Size(87, 20);
+            this.txt_CodPostal.TabIndex = 11;
             // 
             // txt_Colonia
             // 
@@ -187,13 +182,13 @@
             this.lbl_Calle.TabIndex = 0;
             this.lbl_Calle.Text = "Calle";
             // 
-            // mas
+            // msk_Telefono
             // 
-            this.mas.Location = new System.Drawing.Point(29, 121);
-            this.mas.Mask = "(999)000-0000";
-            this.mas.Name = "mas";
-            this.mas.Size = new System.Drawing.Size(100, 20);
-            this.mas.TabIndex = 8;
+            this.msk_Telefono.Location = new System.Drawing.Point(29, 121);
+            this.msk_Telefono.Mask = "(999)000-0000";
+            this.msk_Telefono.Name = "msk_Telefono";
+            this.msk_Telefono.Size = new System.Drawing.Size(100, 20);
+            this.msk_Telefono.TabIndex = 8;
             // 
             // txt_Nombre
             // 
@@ -211,6 +206,7 @@
             // 
             // txt_ID
             // 
+            this.txt_ID.Enabled = false;
             this.txt_ID.Location = new System.Drawing.Point(27, 40);
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.Size = new System.Drawing.Size(100, 20);
@@ -255,48 +251,17 @@
             // dtg_Proveedores
             // 
             this.dtg_Proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_Proveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.RFC,
-            this.Nombre,
-            this.Telefono,
-            this.Direccion});
             this.dtg_Proveedores.Location = new System.Drawing.Point(12, 358);
             this.dtg_Proveedores.Name = "dtg_Proveedores";
             this.dtg_Proveedores.Size = new System.Drawing.Size(547, 109);
             this.dtg_Proveedores.TabIndex = 1;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            // 
-            // RFC
-            // 
-            this.RFC.HeaderText = "RFC";
-            this.RFC.Name = "RFC";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btn_Eliminar);
             this.groupBox3.Controls.Add(this.btn_Guardar);
             this.groupBox3.Controls.Add(this.btn_Modificar);
-            this.groupBox3.Controls.Add(this.btn_Agregar);
+            this.groupBox3.Controls.Add(this.btn_Nuevo);
             this.groupBox3.Controls.Add(this.btn_Buscar);
             this.groupBox3.Location = new System.Drawing.Point(460, 58);
             this.groupBox3.Name = "groupBox3";
@@ -306,39 +271,43 @@
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(6, 229);
+            this.btn_Eliminar.Location = new System.Drawing.Point(6, 212);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(107, 41);
             this.btn_Eliminar.TabIndex = 4;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // btn_Guardar
             // 
-            this.btn_Guardar.Location = new System.Drawing.Point(6, 176);
+            this.btn_Guardar.Location = new System.Drawing.Point(7, 118);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(107, 41);
             this.btn_Guardar.TabIndex = 3;
             this.btn_Guardar.Text = "Guardar";
             this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(6, 128);
+            this.btn_Modificar.Location = new System.Drawing.Point(7, 165);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(107, 41);
             this.btn_Modificar.TabIndex = 2;
-            this.btn_Modificar.Text = "Modificar";
+            this.btn_Modificar.Text = "Actualizar";
             this.btn_Modificar.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
-            // btn_Agregar
+            // btn_Nuevo
             // 
-            this.btn_Agregar.Location = new System.Drawing.Point(6, 71);
-            this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(107, 41);
-            this.btn_Agregar.TabIndex = 1;
-            this.btn_Agregar.Text = "Agregar";
-            this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Nuevo.Location = new System.Drawing.Point(6, 71);
+            this.btn_Nuevo.Name = "btn_Nuevo";
+            this.btn_Nuevo.Size = new System.Drawing.Size(107, 41);
+            this.btn_Nuevo.TabIndex = 1;
+            this.btn_Nuevo.Text = "Nuevo";
+            this.btn_Nuevo.UseVisualStyleBackColor = true;
+            this.btn_Nuevo.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // btn_Buscar
             // 
@@ -379,10 +348,10 @@
             // pic_Titulo
             // 
             this.pic_Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.pic_Titulo.Location = new System.Drawing.Point(0, 1);
+            this.pic_Titulo.Location = new System.Drawing.Point(-7, -3);
             this.pic_Titulo.Margin = new System.Windows.Forms.Padding(4);
             this.pic_Titulo.Name = "pic_Titulo";
-            this.pic_Titulo.Size = new System.Drawing.Size(592, 54);
+            this.pic_Titulo.Size = new System.Drawing.Size(599, 54);
             this.pic_Titulo.TabIndex = 23;
             this.pic_Titulo.TabStop = false;
             // 
@@ -401,6 +370,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_ProveedoresGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frm_ProveedoresGUI_Load);
             this.grb_Datos.ResumeLayout(false);
             this.grb_Datos.PerformLayout();
             this.grb_Dieccion.ResumeLayout(false);
@@ -421,7 +391,7 @@
         private System.Windows.Forms.Label lbl_Num;
         private System.Windows.Forms.TextBox txt_Calle;
         private System.Windows.Forms.Label lbl_Calle;
-        private System.Windows.Forms.MaskedTextBox mas;
+        private System.Windows.Forms.MaskedTextBox msk_Telefono;
         private System.Windows.Forms.TextBox txt_Nombre;
         private System.Windows.Forms.TextBox txt_RFC;
         private System.Windows.Forms.TextBox txt_ID;
@@ -433,18 +403,13 @@
         private System.Windows.Forms.Label lbl_Colonia;
         private System.Windows.Forms.TextBox txt_Cruzamientos;
         private System.Windows.Forms.Label lbl_Cruzamientos;
-        private System.Windows.Forms.TextBox txr_CodPostal;
+        private System.Windows.Forms.TextBox txt_CodPostal;
         private System.Windows.Forms.TextBox txt_Colonia;
         private System.Windows.Forms.DataGridView dtg_Proveedores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RFC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btn_Guardar;
         private System.Windows.Forms.Button btn_Modificar;
-        private System.Windows.Forms.Button btn_Agregar;
+        private System.Windows.Forms.Button btn_Nuevo;
         private System.Windows.Forms.Button btn_Buscar;
         private System.Windows.Forms.Button btn_Eliminar;
         private System.Windows.Forms.Button btn_Salir;

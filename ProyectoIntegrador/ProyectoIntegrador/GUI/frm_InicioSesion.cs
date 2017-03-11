@@ -15,7 +15,7 @@ namespace ProyectoIntegrador
     public partial class frm_InicioSecionGUI : Form
     {
         HerramientasGUI Herramientas = new HerramientasGUI();
-        InicioSesionBO Login = new InicioSesionBO(); 
+        UsuarioBO Login = new UsuarioBO(); 
 
         public frm_InicioSecionGUI()
         {
@@ -30,8 +30,8 @@ namespace ProyectoIntegrador
 
         private void btn_Iniciar_Click(object sender, EventArgs e)
         {
-            Login.UserName = txt_Usuario.Text;
-            Login.Password = txt_Contraseña.Text;
+            Login.NombreUsuario = txt_Usuario.Text;
+            Login.ContraseñaUsuario = txt_Contraseña.Text;
             if (Login.Login() == true)
             {
                 MessageBox.Show("Bienvenido", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoIntegrador.GUI;
-
+using ProyectoIntegrador.DAO;
 namespace ProyectoIntegrador
 {
     static class Program
@@ -15,8 +15,10 @@ namespace ProyectoIntegrador
         [STAThread]
         static void Main()
         {
+            ConexionDAO a = new ConexionDAO();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            a.ConectarDB();
             Application.Run(new frm_PrincipalGUI());
         }
     }

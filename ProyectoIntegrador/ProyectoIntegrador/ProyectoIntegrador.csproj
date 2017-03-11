@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Controles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\PracticaFinalU2\Controles\Controles\bin\Debug\Controles.dll</HintPath>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,7 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BO\InicioSesionBO.cs" />
+    <Compile Include="BO\ProveedorBO.cs" />
+    <Compile Include="BO\UsuarioBO.cs" />
+    <Compile Include="DAO\ConexionDAO.cs" />
+    <Compile Include="DAO\ProveedoresDAO.cs" />
+    <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="GUI\frm_MarcasGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +228,13 @@
   <ItemGroup>
     <None Include="Resources\camion-de-carga.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etiqueta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

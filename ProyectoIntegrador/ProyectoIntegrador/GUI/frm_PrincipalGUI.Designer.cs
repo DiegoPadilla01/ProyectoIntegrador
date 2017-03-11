@@ -36,11 +36,15 @@
             this.btn_Productos = new System.Windows.Forms.Button();
             this.btn_CatalogoClientes = new System.Windows.Forms.Button();
             this.pnl_Principal = new System.Windows.Forms.Panel();
-            this.btn_Salir = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Salir = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Catalogo = new System.Windows.Forms.Button();
             this.btn_AbrirPunto = new System.Windows.Forms.Button();
             this.pnl_Catalogos.SuspendLayout();
             this.pnl_Principal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Catalogos
@@ -125,7 +129,7 @@
             this.btn_Productos.FlatAppearance.BorderSize = 0;
             this.btn_Productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Productos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Productos.Image = global::ProyectoIntegrador.Properties.Resources.negocios_blck__1_;
+            this.btn_Productos.Image = global::ProyectoIntegrador.Properties.Resources.etiqueta;
             this.btn_Productos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Productos.Location = new System.Drawing.Point(20, 145);
             this.btn_Productos.Name = "btn_Productos";
@@ -154,7 +158,10 @@
             // pnl_Principal
             // 
             this.pnl_Principal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.pnl_Principal.Controls.Add(this.btn_Salir);
+            this.pnl_Principal.Controls.Add(this.label2);
+            this.pnl_Principal.Controls.Add(this.label1);
+            this.pnl_Principal.Controls.Add(this.lbl_Salir);
+            this.pnl_Principal.Controls.Add(this.pictureBox1);
             this.pnl_Principal.Controls.Add(this.btn_Catalogo);
             this.pnl_Principal.Controls.Add(this.btn_AbrirPunto);
             this.pnl_Principal.Location = new System.Drawing.Point(0, -1);
@@ -162,20 +169,44 @@
             this.pnl_Principal.Size = new System.Drawing.Size(157, 747);
             this.pnl_Principal.TabIndex = 30;
             // 
-            // btn_Salir
+            // label2
             // 
-            this.btn_Salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
-            this.btn_Salir.FlatAppearance.BorderSize = 0;
-            this.btn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Salir.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Salir.Image = global::ProyectoIntegrador.Properties.Resources.ic_power_settings_new_black_36dp;
-            this.btn_Salir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Salir.Location = new System.Drawing.Point(40, 643);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(78, 76);
-            this.btn_Salir.TabIndex = 33;
-            this.btn_Salir.UseVisualStyleBackColor = false;
-            this.btn_Salir.Click += new System.EventHandler(this.button2_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 588);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 21);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "22/02/17 5:00PM";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 567);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 21);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Usuario: Juanito";
+            // 
+            // lbl_Salir
+            // 
+            this.lbl_Salir.AutoSize = true;
+            this.lbl_Salir.Location = new System.Drawing.Point(45, 704);
+            this.lbl_Salir.Name = "lbl_Salir";
+            this.lbl_Salir.Size = new System.Drawing.Size(41, 21);
+            this.lbl_Salir.TabIndex = 33;
+            this.lbl_Salir.Text = "Salir";
+            this.lbl_Salir.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoIntegrador.Properties.Resources.salida;
+            this.pictureBox1.Location = new System.Drawing.Point(43, 639);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_Catalogo
             // 
@@ -236,6 +267,8 @@
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frm_PrincipalGUI_MouseClick);
             this.pnl_Catalogos.ResumeLayout(false);
             this.pnl_Principal.ResumeLayout(false);
+            this.pnl_Principal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,10 +280,13 @@
         private System.Windows.Forms.Panel pnl_Principal;
         private System.Windows.Forms.Button btn_Catalogo;
         private System.Windows.Forms.Button btn_AbrirPunto;
-        private System.Windows.Forms.Button btn_Salir;
         private System.Windows.Forms.Button btn_Usuarios;
         private System.Windows.Forms.Button btn_Cerrar;
         private System.Windows.Forms.Button btn_Marcas;
         private System.Windows.Forms.Button btn_Proveedores;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Salir;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
