@@ -10,7 +10,10 @@ namespace ProyectoIntegrador.DAO
     class ConexionDAO
     {
         MySqlConnection conex;
+        MySqlCommand cmd = new MySqlCommand();
+
         string cad_conexion;
+        protected string instruccion;
 
         public MySqlConnection ConectarDB()
         {
@@ -27,6 +30,23 @@ namespace ProyectoIntegrador.DAO
         public void CerrarConexion()
         {
             conex.Close();
+        }
+
+        public int EjecutarInstruccion()
+        {
+            cmd.Connection = ConectarDB();
+            AbrirConexion();
+            cmd.CommandText = instruccion;
+            int acuse = cmd.ExecuteNonQuery();
+            CerrarConexion();
+            if (acuse <= 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
         }
     }
 }

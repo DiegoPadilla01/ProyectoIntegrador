@@ -10,12 +10,11 @@ using System.Data;
 
 namespace ProyectoIntegrador.DAO
 {
-    class UsuariosDAO
+    class UsuariosDAO:ConexionDAO
     {
         ConexionDAO conexion = new ConexionDAO();
         MySqlCommand ejecutar = new MySqlCommand();
 
-        string instruccion;
 
         public int BuscarUsuario(UsuarioBO Usuario)
         {
@@ -63,22 +62,6 @@ namespace ProyectoIntegrador.DAO
         }
 
 
-        private int EjecutarInstruccion()
-        {
-            ejecutar.Connection = conexion.ConectarDB();
-            conexion.AbrirConexion();
-            ejecutar.CommandText = instruccion;
-            int acuse = ejecutar.ExecuteNonQuery();
-            conexion.CerrarConexion();
-            if (acuse <= 0)
-            {
-                return 0;
-            }
-            else
-            {
-                return 1;
-            }
-        }
 
 
     }
