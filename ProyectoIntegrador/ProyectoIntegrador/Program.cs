@@ -18,8 +18,7 @@ namespace ProyectoIntegrador
             ConexionDAO a = new ConexionDAO();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            a.ConectarDB();
-            Application.Run(new frm_PrincipalGUI());
+            Application.Run(new frm_PaisGUI());
         }
     }
 }

@@ -9,7 +9,7 @@ namespace ProyectoIntegrador.BO
 {
     class UsuarioBO
     {
-        UsuariosDAO ConexUsuarios = new UsuariosDAO();
+        CuentaDAO ConexUsuarios = new CuentaDAO();
 
         private string nombreUsuario;
         private string contraseñaUsuario;

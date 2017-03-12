@@ -10,7 +10,7 @@ using System.Data;
 
 namespace ProyectoIntegrador.DAO
 {
-    class UsuariosDAO:ConexionDAO
+    class CuentaDAO:ConexionDAO
     {
         ConexionDAO conexion = new ConexionDAO();
         MySqlCommand ejecutar = new MySqlCommand();
@@ -19,11 +19,11 @@ namespace ProyectoIntegrador.DAO
         public int BuscarUsuario(UsuarioBO Usuario)
         {
             UsuarioBO dato = (UsuarioBO)Usuario;
-            ejecutar.Connection = conexion.ConectarDB();
-            conexion.AbrirConexion();
+            ejecutar.Connection = ConectarDB();
+            AbrirConexion();
             ejecutar.CommandText = "SELECT count(*) from usuarios where nombre_usuario='" + dato.NombreUsuario + "' and pass_usuario ='" + dato.ContraseñaUsuario + "'";
             int acuse = int.Parse(ejecutar.ExecuteScalar().ToString());
-            conexion.CerrarConexion();
+            CerrarConexion();
             return acuse;
         }
 
@@ -52,7 +52,7 @@ namespace ProyectoIntegrador.DAO
         public DataTable Vista()
         {
             instruccion = "Select * from usuarios";
-            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion, conexion.ConectarDB());
+            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion, ConectarDB());
             DataTable TablaConsulta = new DataTable();
             adp.Fill(TablaConsulta);
             TablaConsulta.Columns[0].ColumnName = "Nombre de usuario";

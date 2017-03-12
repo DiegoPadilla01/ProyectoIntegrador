@@ -18,7 +18,7 @@ namespace ProyectoIntegrador.GUI
         HerramientasGUI Herramientas = new HerramientasGUI();
 
         UsuarioBO objUser = new UsuarioBO();
-        UsuariosDAO DB = new UsuariosDAO();
+        CuentaDAO DB = new CuentaDAO();
 
         public frm_UsuariosGUI()
         {

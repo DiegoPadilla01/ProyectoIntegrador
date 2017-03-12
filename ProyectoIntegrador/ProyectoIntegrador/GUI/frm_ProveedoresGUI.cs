@@ -18,7 +18,7 @@ namespace ProyectoIntegrador.GUI
         HerramientasGUI Herramientas = new HerramientasGUI();
 
         ProveedorBO objProveedor = new ProveedorBO();
-        ProveedoresDAO DB = new ProveedoresDAO();
+        ProveedorDAO DB = new ProveedorDAO();
 
         public frm_ProveedoresGUI()
         {

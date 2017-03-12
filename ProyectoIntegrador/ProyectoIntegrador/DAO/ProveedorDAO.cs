@@ -9,7 +9,7 @@ using ProyectoIntegrador.BO;
 
 namespace ProyectoIntegrador.DAO
 {
-    class ProveedoresDAO
+    class ProveedorDAO:ConexionDAO
     {
         ConexionDAO conexion = new ConexionDAO();
         MySqlCommand ejecutar = new MySqlCommand();
@@ -19,11 +19,11 @@ namespace ProyectoIntegrador.DAO
         public int BuscarProveedor(ProveedorBO Proveedor)
         {
             ProveedorBO dato = (ProveedorBO)Proveedor;
-            ejecutar.Connection = conexion.ConectarDB();
-            conexion.AbrirConexion();
+            ejecutar.Connection = ConectarDB();
+            AbrirConexion();
   //          ejecutar.CommandText = "SELECT count(*) from usuarios where nombre_usuario='" + dato.NombreUsuario + "' and pass_usuario ='" + dato.ContraseñaUsuario + "'";
             int acuse = int.Parse(ejecutar.ExecuteScalar().ToString());
-            conexion.CerrarConexion();
+            CerrarConexion();
             return acuse;
         }
 
@@ -52,7 +52,7 @@ namespace ProyectoIntegrador.DAO
         public DataTable Vista()
         {
             instruccion = "Select * from proveedores";
-            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion, conexion.ConectarDB());
+            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion, ConectarDB());
             DataTable TablaConsulta = new DataTable();
             adp.Fill(TablaConsulta);
             TablaConsulta.Columns[0].ColumnName = "Id provedor";
@@ -67,24 +67,5 @@ namespace ProyectoIntegrador.DAO
 
             return TablaConsulta;
         }
-
-
-        private int EjecutarInstruccion()
-        {
-            ejecutar.Connection = conexion.ConectarDB();
-            conexion.AbrirConexion();
-            ejecutar.CommandText = instruccion;
-            int acuse = ejecutar.ExecuteNonQuery();
-            conexion.CerrarConexion();
-            if (acuse <= 0)
-            {
-                return 0;
-            }
-            else
-            {
-                return 1;
-            }
-        }
-
     }
 }
