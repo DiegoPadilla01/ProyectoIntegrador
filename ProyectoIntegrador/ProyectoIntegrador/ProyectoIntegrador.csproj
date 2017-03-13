@@ -51,10 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BO\PaisBO.cs" />
+    <Compile Include="BO\ProductoBO.cs" />
     <Compile Include="BO\ProveedorBO.cs" />
     <Compile Include="BO\UsuarioBO.cs" />
     <Compile Include="DAO\ConexionDAO.cs" />
     <Compile Include="DAO\PaisDAO.cs" />
+    <Compile Include="DAO\ProductoDAO.cs" />
     <Compile Include="DAO\ProveedorDAO.cs" />
     <Compile Include="DAO\CuentaDAO.cs" />
     <Compile Include="GUI\frm_MarcasGUI.cs">

@@ -25,11 +25,13 @@ namespace ProyectoIntegrador.GUI
         private void frm_PaisGUI_Load(object sender, EventArgs e)
         {
             RefrescarVista();
+            
         }
 
         private void RefrescarVista()
         {
             dgt_Vista.DataSource = BD.VistaPais();
+            dgt_Vista.Font = new Font("Microsoft Sans Serif", 15);
         }
 
         private void btn_Nuevo_Click(object sender, EventArgs e)
@@ -92,6 +94,14 @@ namespace ProyectoIntegrador.GUI
                     MessageBox.Show("Error eliminados");
                 }
             }
+        }
+
+        private void dgt_Vista_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_IdPais.Text = dgt_Vista.CurrentRow.Cells[0].Value.ToString();
+            txt_NombrePais.Text = dgt_Vista.CurrentRow.Cells[1].Value.ToString();
+            
+
         }
     }
 }

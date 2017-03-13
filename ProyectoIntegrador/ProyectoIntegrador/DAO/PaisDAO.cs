@@ -30,7 +30,10 @@ namespace ProyectoIntegrador.DAO
         public DataTable VistaPais()
         {
             instruccion = "Select * from pais";
-            return EjecutarVista();
+            DataTable Pais = EjecutarVista();
+            Pais.Columns[0].ColumnName = "Id pais";
+            Pais.Columns[1].ColumnName = "Nombre";
+            return Pais;
         }
     }
 }
