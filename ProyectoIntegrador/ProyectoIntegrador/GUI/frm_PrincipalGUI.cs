@@ -23,6 +23,9 @@ namespace ProyectoIntegrador.GUI
         frm_ProveedoresGUI formProveedores = new frm_ProveedoresGUI();
         frm_ClienteGUI formClientes = new frm_ClienteGUI();
         frm_PuntodeVentaGUI formVentas = new frm_PuntodeVentaGUI();
+        frm_CiudadGUI formCiudad = new frm_CiudadGUI();
+        frm_EstadoGUI formEstado = new frm_EstadoGUI();
+        
 
 
         public frm_PrincipalGUI()
@@ -170,6 +173,26 @@ namespace ProyectoIntegrador.GUI
             {
                 formVentas.activo = true;
                 AbrirForm(formVentas);
+
+            }
+        }
+
+        private void btn_Ciudades_Click(object sender, EventArgs e)
+        {
+            if (!formCiudad.activo == true)
+            {
+                formCiudad.activo = true;
+                AbrirForm(formCiudad);
+
+            }
+        }
+
+        private void btn_Estados_Click(object sender, EventArgs e)
+        {
+            if (!formEstado.activo == true)
+            {
+                formEstado.activo = true;
+                AbrirForm(formEstado);
 
             }
         }
