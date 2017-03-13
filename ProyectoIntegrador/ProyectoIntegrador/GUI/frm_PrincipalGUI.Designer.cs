@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnl_Catalogos = new System.Windows.Forms.Panel();
+            this.btn_Estados = new System.Windows.Forms.Button();
+            this.btn_Ciudades = new System.Windows.Forms.Button();
             this.btn_Proveedores = new System.Windows.Forms.Button();
             this.btn_Marcas = new System.Windows.Forms.Button();
             this.btn_Cerrar = new System.Windows.Forms.Button();
@@ -50,6 +52,8 @@
             // pnl_Catalogos
             // 
             this.pnl_Catalogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            this.pnl_Catalogos.Controls.Add(this.btn_Estados);
+            this.pnl_Catalogos.Controls.Add(this.btn_Ciudades);
             this.pnl_Catalogos.Controls.Add(this.btn_Proveedores);
             this.pnl_Catalogos.Controls.Add(this.btn_Marcas);
             this.pnl_Catalogos.Controls.Add(this.btn_Cerrar);
@@ -58,9 +62,41 @@
             this.pnl_Catalogos.Controls.Add(this.btn_CatalogoClientes);
             this.pnl_Catalogos.Location = new System.Drawing.Point(152, 0);
             this.pnl_Catalogos.Name = "pnl_Catalogos";
-            this.pnl_Catalogos.Size = new System.Drawing.Size(157, 729);
+            this.pnl_Catalogos.Size = new System.Drawing.Size(157, 754);
             this.pnl_Catalogos.TabIndex = 26;
             this.pnl_Catalogos.Visible = false;
+            // 
+            // btn_Estados
+            // 
+            this.btn_Estados.BackgroundImage = global::ProyectoIntegrador.Properties.Resources.boton_normalMenuPrin;
+            this.btn_Estados.FlatAppearance.BorderSize = 0;
+            this.btn_Estados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Estados.ForeColor = System.Drawing.Color.White;
+            this.btn_Estados.Image = global::ProyectoIntegrador.Properties.Resources.interfaz;
+            this.btn_Estados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Estados.Location = new System.Drawing.Point(20, 668);
+            this.btn_Estados.Name = "btn_Estados";
+            this.btn_Estados.Size = new System.Drawing.Size(117, 91);
+            this.btn_Estados.TabIndex = 38;
+            this.btn_Estados.Text = "\r\nEstados";
+            this.btn_Estados.UseVisualStyleBackColor = true;
+            this.btn_Estados.Click += new System.EventHandler(this.btn_Estados_Click);
+            // 
+            // btn_Ciudades
+            // 
+            this.btn_Ciudades.BackgroundImage = global::ProyectoIntegrador.Properties.Resources.boton_normalMenuPrin;
+            this.btn_Ciudades.FlatAppearance.BorderSize = 0;
+            this.btn_Ciudades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Ciudades.ForeColor = System.Drawing.Color.White;
+            this.btn_Ciudades.Image = global::ProyectoIntegrador.Properties.Resources.interfaz;
+            this.btn_Ciudades.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Ciudades.Location = new System.Drawing.Point(20, 566);
+            this.btn_Ciudades.Name = "btn_Ciudades";
+            this.btn_Ciudades.Size = new System.Drawing.Size(117, 91);
+            this.btn_Ciudades.TabIndex = 37;
+            this.btn_Ciudades.Text = "\rCiudades";
+            this.btn_Ciudades.UseVisualStyleBackColor = true;
+            this.btn_Ciudades.Click += new System.EventHandler(this.btn_Ciudades_Click);
             // 
             // btn_Proveedores
             // 
@@ -83,7 +119,7 @@
             this.btn_Marcas.BackgroundImage = global::ProyectoIntegrador.Properties.Resources.boton_normalMenuPrin;
             this.btn_Marcas.FlatAppearance.BorderSize = 0;
             this.btn_Marcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Marcas.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Marcas.ForeColor = System.Drawing.Color.White;
             this.btn_Marcas.Image = global::ProyectoIntegrador.Properties.Resources.interfaz;
             this.btn_Marcas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Marcas.Location = new System.Drawing.Point(20, 357);
@@ -288,5 +324,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_Salir;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_Estados;
+        private System.Windows.Forms.Button btn_Ciudades;
     }
 }
