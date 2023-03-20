@@ -92,6 +92,18 @@
     <Compile Include="DAO\ProductoDAO.cs" />
     <Compile Include="DAO\ProveedorDAO.cs" />
     <Compile Include="DAO\CuentaDAO.cs" />
+    <Compile Include="GUI\frm_CiudadGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_CiudadGUI.Designer.cs">
+      <DependentUpon>frm_CiudadGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_EstadoGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_EstadoGUI.Designer.cs">
+      <DependentUpon>frm_EstadoGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frm_MarcasGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +161,9 @@
     <Compile Include="GUI\HerramientasGUI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frm_EstadoGUI.resx">
+      <DependentUpon>frm_EstadoGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frm_MarcasGUI.resx">
       <DependentUpon>frm_MarcasGUI.cs</DependentUpon>
     </EmbeddedResource>

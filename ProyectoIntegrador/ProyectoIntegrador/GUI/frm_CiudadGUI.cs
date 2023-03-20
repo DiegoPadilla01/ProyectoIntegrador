@@ -12,21 +12,18 @@ using System.Windows.Forms;
 
 namespace ProyectoIntegrador.GUI
 {
-    public partial class frm_EstadoGUI : Form
+    public partial class frm_CiudadGUI : Form
     {
-
         public bool activo = false;
 
         HerramientasGUI herramientas = new HerramientasGUI();
 
-        EstadoBO ObjEstado = new EstadoBO();
-        EstadoDAO BD = new EstadoDAO();
-
-        public frm_EstadoGUI()
+        CiudadBO ObjCiudad = new CiudadBO();
+        CiudadDAO BD = new CiudadDAO();
+        public frm_CiudadGUI()
         {
             InitializeComponent();
         }
-
         private void btn_Salir_Click(object sender, EventArgs e)
         {
             herramientas.FormAct = this;
@@ -37,25 +34,26 @@ namespace ProyectoIntegrador.GUI
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             btn_Agregar.Enabled = false;
-            btn_Eliminar.Enabled = false;
             btn_Modificar.Enabled = false;
+            btn_Eliminar.Enabled = false;
             btn_Guardar.Enabled = true;
-            txt_IdEstado.Enabled = true;
+            txt_IdCiud.Enabled = true;
+            txt_IdCiud.Clear();
+            txt_NomCiud.Clear();
             txt_IdEstado.Clear();
-            txt_Nomestado.Clear();
-            txt_IdPais.Clear();
         }
         private void ActualizarDataGrid()
         {
-            dgt_Estado.DataSource = BD.Vista();
+            dgt_Ciudad.DataSource = BD.Vista();
             SeleccionarFila();
         }
         public void SeleccionarFila()
         {
-            if (dgt_Estado.RowCount > 0 && dgt_Estado.CurrentRow != null)
+            if (dgt_Ciudad.RowCount > 0 && dgt_Ciudad.CurrentRow != null)
             {
-                txt_IdEstado.Text = dgt_Estado.CurrentRow.Cells[0].Value.ToString();
-
+                txt_IdCiud.Text = dgt_Ciudad.CurrentRow.Cells[0].Value.ToString();
+                txt_NomCiud.Text = dgt_Ciudad.CurrentRow.Cells[1].Value.ToString();
+                txt_IdEstado.Text = dgt_Ciudad.CurrentRow.Cells[2].Value.ToString();
             }
             else
             {
@@ -64,15 +62,16 @@ namespace ProyectoIntegrador.GUI
         }
         public void AsignarValores()
         {
-            ObjEstado.Id_estado = int.Parse(txt_IdEstado.Text);
-            ObjEstado.Nombre_estado = txt_Nomestado.Text;
-            ObjEstado.Id_pais = int.Parse(txt_IdPais.Text);
+            ObjCiudad.Id_ciudad = int.Parse(txt_IdCiud.Text);
+            ObjCiudad.Nombre_ciudad = txt_NomCiud.Text;
+            ObjCiudad.Id_estado = int.Parse(txt_IdEstado.Text);
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
+
             AsignarValores();
-            if (BD.ModificarDatos(ObjEstado) == 1)
+            if (BD.ActualizarDatos(ObjCiudad) == 1)
             {
                 MessageBox.Show("Datos actualizdos", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -84,35 +83,10 @@ namespace ProyectoIntegrador.GUI
             }
         }
 
-        private void btn_Guardar_Click(object sender, EventArgs e)
-        {
-            AsignarValores();
-
-            if (txt_IdEstado.Text != "" && txt_Nomestado.Text != "" && txt_IdPais.Text != "")
-            {
-                if (BD.GuardarDatos(ObjEstado) == 1)
-                {
-                    MessageBox.Show("Datos Guardados", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                    btn_Agregar.Enabled = true;
-                    btn_Guardar.Enabled = false;
-                    btn_Modificar.Enabled = true;
-                    btn_Eliminar.Enabled = true;
-                    txt_IdEstado.Enabled = false;
-
-                    ActualizarDataGrid();
-                }
-                else
-                {
-                    MessageBox.Show("Error al guardar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            ObjEstado.Id_estado = int.Parse(txt_IdEstado.Text);
-            if (BD.EliminarDatos(ObjEstado) == 1)
+            ObjCiudad.Id_ciudad = int.Parse(txt_IdCiud.Text);
+            if (BD.EliminarDatos(ObjCiudad) == 1)
             {
                 MessageBox.Show("Datos eliminados");
                 ActualizarDataGrid();
@@ -120,6 +94,31 @@ namespace ProyectoIntegrador.GUI
             else
             {
                 MessageBox.Show("Error al eliminar los Datos");
+            }
+        }
+
+        private void btn_Guardar_Click(object sender, EventArgs e)
+        {
+            AsignarValores();
+
+            if (txt_IdCiud.Text != "" && txt_NomCiud.Text != "" && txt_IdEstado.Text != "")
+            {
+                if (BD.GuardarDatos(ObjCiudad) == 1)
+                {
+                    MessageBox.Show("Datos Guardados", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    btn_Agregar.Enabled = true;
+                    btn_Guardar.Enabled = false;
+                    btn_Modificar.Enabled = true;
+                    btn_Eliminar.Enabled = true;
+                    txt_IdCiud.Enabled = false;
+
+                    ActualizarDataGrid();
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
