@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 namespace ProyectoIntegrador.DAO
 {
-    class ConexionDAO
+   public class ConexionDAO
     {
         MySqlConnection conex;
         MySqlCommand cmd = new MySqlCommand();
@@ -15,24 +15,24 @@ namespace ProyectoIntegrador.DAO
         string cad_conexion;
         protected string instruccion;
 
-        protected MySqlConnection ConectarDB()
+        public MySqlConnection ConectarDB()
         {
-            cad_conexion = "server=104.198.222.114; database=tiendaAbarrotes; uid=root; pwd=12345;";
+            cad_conexion = "server=localhost; database=abarrotesprueba; uid=root; pwd=1234;";
             conex = new MySqlConnection(cad_conexion);
             return conex;
         }
 
-        protected void AbrirConexion()
+        public void AbrirConexion()
         {
             conex.Open();
         }
 
-        protected void CerrarConexion()
+        public void CerrarConexion()
         {
             conex.Close();
         }
 
-        protected int EjecutarInstruccion()
+        public int EjecutarInstruccion()
         {
             cmd.Connection = ConectarDB();
             AbrirConexion();

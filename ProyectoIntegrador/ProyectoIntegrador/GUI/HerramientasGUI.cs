@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ProyectoIntegrador.GUI
 {
-    class HerramientasGUI
+    public class HerramientasGUI
     {
         private Form formAct;
         private Form formHijo;

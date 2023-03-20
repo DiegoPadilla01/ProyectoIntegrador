@@ -1,11 +1,11 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using ProyectoIntegrador.BO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using System.Data;
-using ProyectoIntegrador.BO;
 
 namespace ProyectoIntegrador.DAO
 {
@@ -15,7 +15,7 @@ namespace ProyectoIntegrador.DAO
         MySqlCommand ejecutar = new MySqlCommand();
 
         string instruccion;
-      
+
         public int GuardarDatos(EstadoBO Estado)
         {
             EstadoBO dato = (EstadoBO)Estado;
@@ -25,7 +25,7 @@ namespace ProyectoIntegrador.DAO
         public int ModificarDatos(EstadoBO Estado)
         {
             EstadoBO dato = (EstadoBO)Estado;
-            instruccion = "update estado set nombre_estado ='" + dato.Nombre_estado + "',id_pais = '"+dato.Id_pais+"'";
+            instruccion = "update estado set nombre_estado ='" + dato.Nombre_estado + "',id_pais = '" + dato.Id_pais + "'";
             return EjecutarInstruccion();
         }
         public int EliminarDatos(EstadoBO Estado)
@@ -37,7 +37,7 @@ namespace ProyectoIntegrador.DAO
         public DataTable Vista()
         {
             instruccion = "select from * estado";
-            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion,conexion.ConectarDB());
+            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion, conexion.ConectarDB());
             DataTable TablaConsulta = new DataTable();
             adp.Fill(TablaConsulta);
             TablaConsulta.Columns[0].ColumnName = "Clave";
@@ -52,7 +52,7 @@ namespace ProyectoIntegrador.DAO
             ejecutar.CommandText = instruccion;
             int acuse = ejecutar.ExecuteNonQuery();
             conexion.CerrarConexion();
-            if(acuse <=0)
+            if (acuse <= 0)
             {
                 return 0;
             }

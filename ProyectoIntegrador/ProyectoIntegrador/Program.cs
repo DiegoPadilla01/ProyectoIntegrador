@@ -15,10 +15,10 @@ namespace ProyectoIntegrador
         [STAThread]
         static void Main()
         {
-            ConexionDAO a = new ConexionDAO();
+          //  ConexionDAO a = new ConexionDAO();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_ProductosGUI());
+            Application.Run(new frm_PrincipalGUI());
         }
     }
 }

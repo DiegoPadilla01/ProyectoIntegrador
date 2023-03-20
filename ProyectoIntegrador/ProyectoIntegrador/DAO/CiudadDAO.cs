@@ -1,11 +1,11 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using ProyectoIntegrador.BO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using System.Data;
-using ProyectoIntegrador.BO;
 
 namespace ProyectoIntegrador.DAO
 {
@@ -15,7 +15,7 @@ namespace ProyectoIntegrador.DAO
         MySqlCommand ejecutar = new MySqlCommand();
 
         string instruccion;
-      
+
         public int GuardarDatos(CiudadBO Ciudad)
         {
             CiudadBO dato = (CiudadBO)Ciudad;
@@ -25,7 +25,7 @@ namespace ProyectoIntegrador.DAO
         public int ActualizarDatos(CiudadBO Ciudad)
         {
             CiudadBO dato = (CiudadBO)Ciudad;
-            instruccion = "update ciudad set nombre_ciudad ='" + dato.Nombre_ciudad + "',id_estado= '"+dato.Id_estado+"'";
+            instruccion = "update ciudad set nombre_ciudad ='" + dato.Nombre_ciudad + "',id_estado= '" + dato.Id_estado + "'";
             return EjecutarInstruccion();
         }
         public int EliminarDatos(CiudadBO Ciudad)
@@ -52,9 +52,9 @@ namespace ProyectoIntegrador.DAO
             ejecutar.CommandText = instruccion;
             int acuse = ejecutar.ExecuteNonQuery();
             conexion.CerrarConexion();
-            if(acuse <= 0)
+            if (acuse <= 0)
             {
-                return  0;
+                return 0;
             }
             else
             {

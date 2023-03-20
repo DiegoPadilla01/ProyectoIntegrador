@@ -1,11 +1,11 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using ProyectoIntegrador.BO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using System.Data;
-using ProyectoIntegrador.BO;
 
 namespace ProyectoIntegrador.DAO
 {
@@ -37,7 +37,7 @@ namespace ProyectoIntegrador.DAO
         public DataTable Vista()
         {
             instruccion = "select from * marca";
-            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion,conexion.ConectarDB());
+            MySqlDataAdapter adp = new MySqlDataAdapter(instruccion, conexion.ConectarDB());
             DataTable TablaConsulta = new DataTable();
             adp.Fill(TablaConsulta);
             TablaConsulta.Columns[0].ColumnName = "Clave";
@@ -51,7 +51,7 @@ namespace ProyectoIntegrador.DAO
             ejecutar.CommandText = instruccion;
             int acuse = ejecutar.ExecuteNonQuery();
             conexion.CerrarConexion();
-            if(acuse <=0)
+            if (acuse <= 0)
             {
                 return 0;
             }
